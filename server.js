@@ -15,7 +15,7 @@ const adminsRouter = require('./routes/admin');
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/gnotes',{ useNewUrlParser: true,useCreateIndex:true} );
+mongoose.connect('mongodb+srv://Karkaih:Karkaih04@cluster-jrtmy.mongodb.net/gnotes?retryWrites=true&w=majority',{ useNewUrlParser: true,useCreateIndex:true} );
 const connection = mongoose.connection;
 
 connection.once('open',function(){
