@@ -7,6 +7,7 @@ const PORT = 8000;
 const etudiantsRouter = require('./routes/etudiant');
 const matieresRouter = require('./routes/matiere');
 const notesRouter = require('./routes/notes');
+const adminsRouter = require('./routes/admin');
 
 
 
@@ -24,6 +25,8 @@ connection.once('open',function(){
 app.use('/etudiants',etudiantsRouter);
 app.use('/matieres',matieresRouter);
 app.use('/notes',notesRouter);
+app.use('/admins',adminsRouter);
+
  
 app.listen(PORT,function(){
     console.log("the Server is running on Port :"+ PORT);
